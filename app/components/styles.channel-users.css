@@ -1,0 +1,21 @@
+.wk-channel-users {
+  width: 250px;
+  background-color: var(--black-a2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-left: 1px solid var(--gray-3);
+  padding: var(--space-4);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.wk-channel-users::-webkit-scrollbar {
+  width: 0px;
+}
+
+.wk-channel-user-button {
+  border-radius: max(var(--radius-3), var(--radius-full));
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}

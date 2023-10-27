@@ -1,0 +1,56 @@
+.wk-channel-header {
+    -webkit-app-region: drag;
+    position: static;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid var(--gray-a3);
+    padding: var(--space-4);
+    display: flex;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.wk-channel-header > * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.wk-searchbar {
+    -webkit-app-region: no-drag;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+    cursor: default;
+}
+
+.wk-searchbar {
+    transition: max-width 0.1s ease-out;
+    width: 100%;
+    max-width: 200px;
+}
+
+.wk-searchbar:focus-within {
+    transition: max-width 0.1s ease-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.wk-searchbar > * {
+    -webkit-app-region: no-drag;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}

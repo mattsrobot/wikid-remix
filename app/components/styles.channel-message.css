@@ -1,0 +1,190 @@
+.wk-channel-message {
+    margin-left: var(--space-4);
+    margin-right: var(--space-4);
+    position: relative;
+}
+
+.wk-channel-message[data-type="active"] {
+    border-radius: max(var(--radius-3), var(--radius-full));
+    background-color: var(--yellow-a3);
+    box-shadow: 0 0 0 5px var(--yellow-a3);
+}
+
+.wk-channel-message[data-type="normal"] {
+    border-radius: max(var(--radius-3), var(--radius-full));
+    background-color: transparent;
+    box-shadow: 0 0 0 5px transparent;
+}
+
+.wk-channel-message:hover {
+    border-radius: max(var(--radius-3), var(--radius-full));
+    background-color: var(--gray-a3);
+    box-shadow: 0 0 0 5px var(--gray-a3);
+}
+
+.wk-channel-message[data-type="active"]:hover {
+    border-radius: max(var(--radius-3), var(--radius-full));
+    background-color: var(--yellow-a4);
+    box-shadow: 0 0 0 5px var(--yellow-a4);
+}
+
+.wk-channel-message:hover .wk-parent-header {
+    background-color: transparent;
+    box-shadow: 0 0 0 5px transparent;
+}
+
+.wk-channel-message:hover .wk-parent-reply {
+    background-color: transparent;
+    box-shadow: 0 0 0 5px transparent;
+}
+
+.wk-reaction-bar {
+    position: absolute;
+    display: none;
+}
+
+.wk-emojis {
+    z-index: 100;
+    border: 1px solid var(--gray-a3);
+    background-color: var(--mauve-a3);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    width: 70%;
+}
+
+.wk-channel-message:hover .wk-reaction-bar {
+    display: flex;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-3);
+    background-color: var(--gray-a6);
+    position: absolute;
+    right: 2px;
+    top: -10px;
+    padding: var(--space-2);
+    z-index: 3;
+}
+
+.wk-repy-border {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1rem;
+    display: grid;
+    width: 53px;
+}
+
+.wk-reply-inner {
+    margin-left: -7px;
+    grid-column-start: 2;
+    height: 14px;
+    width: 32px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    border-top-left-radius: 0.5rem;
+    border-top-color: var(--gray-a6);
+    border-left-color: var(--gray-a6);
+    border-top-style: solid;
+    border-left-style: solid;
+}
+
+.wk-parent-header {
+    border-top-right-radius: max(var(--radius-3), var(--radius-full));
+    border-top-left-radius: max(var(--radius-3), var(--radius-full));
+    margin-top: -5px;
+}
+
+.wk-parent-reply {
+    border-bottom-right-radius: max(var(--radius-3), var(--radius-full));
+    border-bottom-left-radius: max(var(--radius-3), var(--radius-full));
+}
+
+.wk-parent-reply-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.wk-message-img {
+    border-radius: var(--radius-3);
+    overflow: hidden;
+}
+
+.wk-message-video {
+    border-radius: var(--radius-3);
+    overflow: hidden;
+}
+
+.wk-message-video video {
+    object-fit: cover !important;
+}
+
+.wk-dialog-overlay {
+    background-color: var(--black-a9);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);}
+
+.wk-dialog-content {
+    background-color: transparent;
+    background: transparent;
+    border-radius: 6px;
+    box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 80vw;
+    max-height: 80vh;
+    padding: 25px;
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-2);
+}
+
+.wk-dialog-content:focus {
+    outline: none;
+}
+
+.wk-dialog-image-detail {
+    object-fit: contain !important;
+    height: 100%;
+}
+
+.wk-markdown {
+    unicode-bidi: isolate;
+}
+
+.wk-markdown p {
+    unicode-bidi: isolate;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+@keyframes overlayShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }

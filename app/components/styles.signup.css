@@ -1,0 +1,10 @@
+.wk-signup-bg {
+    -webkit-app-region: drag;
+    min-height: 100vh;
+}
+
+.wk-signup-area {
+    -webkit-app-region: no-drag;
+    max-width: 450px;
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+.wk-communities-settings-panel {
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-0);
+    background-color: var(--black-a2);
+    border-right: 1px solid var(--gray-a3);
+}
+
+.wk-subtracting-header * .wk-communities-settings-panel {
+    height: calc(100vh - var(--community-banner-height));
+}
+
+.wk-communities-settings-panel * {
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.wk-communities-settings-panel > span {
+    margin-left: var(--space-4);
+    margin-right: var(--space-4);
+    justify-content: flex-start;
+}
+
+.wk-communities-settings-panel > a {
+    margin-left: var(--space-2);
+    margin-right: var(--space-2);
+    justify-content: flex-start;
+}
+
+.wk-community-settings-description {
+    position: relative;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid var(--gray-a3);
+    padding: 0;
+}
+
+.wk-community-settings-description-button {
+    -webkit-app-region: drag;
+    padding: var(--space-4);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.wk-community-settings-description-button:hover {
+    background-color: var(--gray-a3);
+}

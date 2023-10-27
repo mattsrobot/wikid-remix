@@ -1,0 +1,76 @@
+.wk-reply-container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+.wk-channel-replybox {
+    padding-bottom: var(--space-4);
+    display: flex;
+    gap: var(--space-1);
+    flex-direction: column;
+    position: relative;
+}
+
+.wk-channel-replybox div {
+    border: 1px solid var(--gray-a4);
+}
+
+.wk-channel-replybox textarea {
+    background-color: var(--gray-3);
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.wk-reply-to {
+    position: absolute;
+    top: -33px;
+    left: 0px;
+    right: 0px;
+    border-radius: var(--radius-6);
+    padding: var(--space-1);
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+    border: 1px solid var(--gray-a3);
+    background-color: var(--yellow-6);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.wk-plus-button {
+    background-color: var(--gray-a7);
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 15px);
+    z-index: 1;
+}
+
+.wk-reply-box-inner {
+    min-height: unset;
+    border-radius: 17px;
+}
+
+.wk-reply-image-container {
+    position: relative;
+    border-radius: var(--radius-3);
+    overflow: hidden;
+}
+
+.wk-reply-image-preview {
+    border-radius: var(--radius-3);
+    overflow: hidden;
+    width: initial !important;
+}
+
+.wk-files-row {
+    max-width: calc(100vw - 647px);
+    overflow-x: auto;
+}
+
+.wk-reply-image-remove {
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}

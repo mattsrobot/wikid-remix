@@ -1,0 +1,10 @@
+.wk-login-bg {
+    -webkit-app-region: drag;
+    min-height: 100vh;
+}
+
+.wk-login-area {
+    -webkit-app-region: no-drag;
+    max-width: 450px;
+    width: 100%;
+}

@@ -1,0 +1,7 @@
+.wk-skeleton span {
+    background-color: var(--gray-4);
+}
+
+.wk-skeleton:hover span {
+    background-color: var(--gray-5);
+}

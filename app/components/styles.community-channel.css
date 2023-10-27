@@ -1,0 +1,15 @@
+.wk-community-main {
+    background-color: var(--gray-2);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+}
+
+.wk-subtracting-header * .wk-community-main {
+    height: calc(100vh - var(--community-banner-height)) ;
+}
+
+.wk-channel-main {
+    width: calc(100vw - 618px);
+}

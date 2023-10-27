@@ -1,0 +1,25 @@
+.wk-channel-feed {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: auto;
+    height: calc(100% - 107px);
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    transition: all 250ms ease;
+}
+
+.wk-channel-message:first-of-type  {
+    margin-top: var(--space-4);
+}
+
+.wk-blur-box {
+    position: sticky;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
